@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Modal } from 'antd';
+import { Contrasena } from './Contrasena';
 
 
 const BotonDetalles = ({elementoActual}) => {
@@ -27,7 +28,7 @@ const BotonDetalles = ({elementoActual}) => {
       <Modal title={elementoActual?.name.first} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <img src={elementoActual?.picture.large}></img>
         <p>{elementoActual?.login.username}</p>
-        <p>{elementoActual?.login.password}</p>
+        <p><Contrasena elementoActual={elementoActual}/></p>
       </Modal>
     </>
   );
