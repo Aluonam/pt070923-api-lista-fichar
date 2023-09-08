@@ -9,6 +9,7 @@ export const Contrasena = ({elementoActual}) => {
   return (
     <>
     <div>
+        {/* Lógica para que el input se marque como password */}
         <input value={elementoActual.login.password} type={contraVisible?"text":"password"}/>
         <button  onClick={()=>{setContraVisible(!contraVisible)}}>Mostrar Contraseña</button>
     </div>
